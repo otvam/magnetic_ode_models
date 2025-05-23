@@ -4,7 +4,7 @@
 
 This repository contains the **slides** and **code** related to the following **webinar**:
 * **Soft Magnetic Materials and Ordinary Differential Equations**
-* **From Linear Circuits to Neural-Network Models**
+* **From Linear Circuits to Neural Network Models**
 * **IEEE MagNet Challenge Webinar  - May 23 2025**
 * **Thomas Guillod - Dartmouth College**
 
@@ -35,9 +35,10 @@ Various **optimizers** can be used to **train** the models:
   * [run_1_dataset.py](run_1_dataset.py) - Parse the CSV files into a DataFrame.
   * [run_2_eqn_train.py](run_2_eqn_train.py) - Train an equation-based model.
   * [run_3_eqn_infer.py](run_3_eqn_infer.py) - Inference of an equation-based model.
-  * [run_4_ann_train.py](run_4_ann_train.py) - Train a neural-based model.
-  * [run_5_ann_infer.py](run_5_ann_infer.py) - Inference of a neural-based model.
-  * [spec_model.py](spec_model.py) - Specifications of the different models.
+  * [run_4_ann_train.py](run_4_ann_train.py) - Train a neural network-based model.
+  * [run_5_ann_infer.py](run_5_ann_infer.py) - Inference of a neural network-based model.
+  * [model_eqn.py](model_eqn.py) - Specifications of the equation-based models.
+  * [model_ann.py](model_ann.py) - Specifications of the neural network-based models.
 * Folders and Python Packages
   * [data](data) - Folder containing the datasets and trained models.
   * [odemodel](odemodel) - Python package with the definition of the models.

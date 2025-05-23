@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 from odesolver import inference
 from odesolver import serialize
 from odesolver import plotting
-import spec_model
+import model_eqn
 
 
 if __name__ == "__main__":
@@ -37,7 +37,7 @@ if __name__ == "__main__":
     raw = serialize.load_dataframe("data/raw_magnet.pkl")
 
     # load the trained model
-    (model, param, const, bnd) = spec_model.get_eqn_nonlinear()
+    (model, param, const, bnd) = model_eqn.get_eqn_nonlinear()
     param = serialize.load_equinox("data/param_eqn.eqx", param)
 
     # inference of the model with the provided dataset

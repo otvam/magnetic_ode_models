@@ -1,7 +1,7 @@
 """
 Train a model with respect to a dataset:
     - Train an equation-based model.
-    - Train a neural-based model.
+    - Train a neural network-based model.
 
 The dataset is split into a training and validation sets.
 The convergence of the optimizer is monitored.
@@ -250,7 +250,7 @@ def get_train_eqn(name, ode, sig, bnd, opt, model, const, raw, param):
 
 def get_train_ann(name, ode, sig, opt, model, const, raw, param):
     """
-    Train a neural-based model with respect to a dataset.
+    Train a neural network-based model with respect to a dataset.
     """
 
     # extract data

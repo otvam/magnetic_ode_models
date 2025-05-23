@@ -1,5 +1,5 @@
 """
-Class with the abstract definition of a model (equation-based or neural-based).
+Class with the abstract definition of a model (equation-based or neural network-based).
 """
 
 __author__ = "Thomas Guillod"

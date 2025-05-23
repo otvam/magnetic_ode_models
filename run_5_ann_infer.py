@@ -1,5 +1,5 @@
 """
-Load a trained neural-based model and a dataset.
+Load a trained neural network-based model and a dataset.
 Evaluate the model with respect to the dataset.
 Show and save the results.
 """
@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 from odesolver import inference
 from odesolver import serialize
 from odesolver import plotting
-import spec_model
+import model_ann
 
 
 if __name__ == "__main__":
@@ -38,7 +38,7 @@ if __name__ == "__main__":
     raw = serialize.load_dataframe("data/raw_magnet.pkl")
 
     # load the trained model
-    (model, param, const) = spec_model.get_ann_dual()
+    (model, param, const) = model_ann.get_ann_dual()
     param = serialize.load_equinox("data/param_ann.eqx", param)
 
     # inference of the model with the provided dataset

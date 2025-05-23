@@ -14,7 +14,7 @@ import jax.random as jr
 import numpy.random as nr
 from odesolver import serialize
 from odesolver import training
-import spec_model
+import model_eqn
 
 
 def _get_optimizer(method):
@@ -154,7 +154,7 @@ if __name__ == "__main__":
     raw = serialize.load_dataframe("data/raw_magnet.pkl")
 
     # load the untrained model
-    (model, param, const, bnd) = spec_model.get_eqn_nonlinear()
+    (model, param, const, bnd) = model_eqn.get_eqn_nonlinear()
 
     # train the model with a given optimizer
     def get_opt_step(name, param_tmp, method):

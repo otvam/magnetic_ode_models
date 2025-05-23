@@ -1,5 +1,5 @@
 """
-Load an untrained neural-based model and a dataset.
+Load an untrained neural network-based model and a dataset.
 Train the model with respect to the dataset.
 Save the trained model parameters.
 """
@@ -12,7 +12,7 @@ import optax
 import jax.random as jr
 from odesolver import serialize
 from odesolver import training
-import spec_model
+import model_ann
 
 
 def _get_optimizer(fo, lr):
@@ -78,7 +78,7 @@ if __name__ == "__main__":
     raw = serialize.load_dataframe("data/raw_magnet.pkl")
 
     # load the untrained model
-    (model, param, const) = spec_model.get_ann_dual()
+    (model, param, const) = model_ann.get_ann_dual()
 
     # train the model for a given number of periods
     def get_opt_step(name, param_tmp, n_wait, n_out, fo, lr):
