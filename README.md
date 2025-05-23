@@ -1,15 +1,15 @@
-# Magnetic Materials and Ordinary Differential Equations
+# Soft Magnetic Materials Models with ODEs
 
 ## Summary
 
 This repository contains the **slides** and **code** related to the following **webinar**:
 * **Soft Magnetic Materials and Ordinary Differential Equations**
 * **From Linear Circuits to Neural Network Models**
-* **IEEE MagNet Challenge Webinar  - May 23 2025**
+* **IEEE MagNet Challenge Webinar - May 23 2025**
 * **Thomas Guillod - Dartmouth College**
 
 This webinar focuses on **ordinary differential equation models for soft-magnetic materials**:
-* Using **equation-based models** (linear and non-linear circuits)
+* Using **equation-based models** (linear and nonlinear circuits)
 * Using **neural ordinary differential equation** models
 
 The **Python code** has the following features:
@@ -22,9 +22,9 @@ The **Python code** has the following features:
 Various **optimizers** can be used to **train** the models:
 * Scipy / latin hypercube sampler
 * Scipy / differential evolution
-* JAX/Optimistix / minimize solver
-* JAX/Optimistix / least-square
-* JAX/Optax / gradient descent
+* JAX / Optimistix / minimize solver
+* JAX / Optimistix / least-square
+* JAX / Optax / gradient descent
 
 ## Repository Description
 

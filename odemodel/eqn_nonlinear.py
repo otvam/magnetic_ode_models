@@ -21,7 +21,7 @@ class Model(model.Model):
         """
         Function defining the ODE.
         Return the derivative of the states.
-        A non-linear circuit is considered.
+        A nonlinear circuit is considered.
         """
 
         # extract the variables
