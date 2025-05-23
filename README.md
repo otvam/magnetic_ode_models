@@ -66,7 +66,7 @@ Various **optimizers** can be used to **train** the models:
 
 ## Credits
 
-PyPEEC was created at **Dartmouth College** by the research group of **Prof. Sullivan**:
+This research was done at **Dartmouth College** by the research group of **Prof. Sullivan**:
 
 * Dartmouth College, NH, USA: https://dartmouth.edu
 * Dartmouth Engineering: https://engineering.dartmouth.edu

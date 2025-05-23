@@ -6,7 +6,7 @@ __author__ = "Thomas Guillod"
 __copyright__ = "Thomas Guillod - Dartmouth College"
 __license__ = "Mozilla Public License Version 2.0"
 
-import jax.nn as jnn
+import jax.nn as nn
 import jax.random as jr
 import equinox as eqx
 from odemodel import ann_dual
@@ -31,13 +31,13 @@ def get_ann_single():
     # initial value for the states
     field_init = 0
 
-    # define the neural networks (input is augmented for the exictation)
+    # define the neural networks (input is augmented for the excitation)
     param = eqx.nn.MLP(
         in_size=var_size + 1,
         out_size=var_size + 0,
         depth=2,
         width_size=12,
-        activation=jnn.tanh,
+        activation=nn.tanh,
         key=key_2,
     )
 
@@ -80,7 +80,7 @@ def get_ann_dual():
             out_size=var_size,
             depth=2,
             width_size=12,
-            activation=jnn.tanh,
+            activation=nn.tanh,
             key=key_1,
         ),
         "mlp_state": eqx.nn.MLP(
@@ -88,7 +88,7 @@ def get_ann_dual():
             out_size=var_size,
             depth=2,
             width_size=12,
-            activation=jnn.tanh,
+            activation=nn.tanh,
             key=key_2,
         ),
     }

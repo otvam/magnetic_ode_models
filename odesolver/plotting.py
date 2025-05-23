@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 
 def _get_err_metrics(err_vec):
     """
-    Compute the error metrics for a error vector.
+    Compute the error metrics for an error vector.
     """
 
     var = {
@@ -134,7 +134,7 @@ def get_plot_single(name, dser):
     ax_h.legend()
     ax_h.grid()
 
-    # setup the plot layout
+    # fix the plot layout
     fig_w.tight_layout()
     fig_h.tight_layout()
 

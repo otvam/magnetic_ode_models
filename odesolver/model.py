@@ -45,7 +45,7 @@ class Model(abc.ABC):
         """
         Function extracting the results from the solution.
         This function is called a single time after the integration.
-        Depending of the implementation, the model may become acausal.
+        Depending on the implementation, the model may become acausal.
         """
 
         pass
