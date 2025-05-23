@@ -105,10 +105,10 @@ def _get_objective(dBdt_ref, H_ref, H_cmp):
     P_cmp = jnp.mean(dBdt_ref * H_cmp)
 
     # compute the squared relative error for the power
-    err_power =  ((P_cmp - P_ref) / P_ref) ** 2
+    err_power = ((P_cmp - P_ref) / P_ref) ** 2
 
     # compute the squared relative error for the field
-    err_field =  H_err_rms_sq / H_ref_rms_sq
+    err_field = H_err_rms_sq / H_ref_rms_sq
 
     return err_power, err_field
 

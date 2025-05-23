@@ -33,12 +33,12 @@ def get_ann_single():
 
     # define the neural networks (input is augmented for the exictation)
     param = eqx.nn.MLP(
-        in_size=var_size+1,
-        out_size=var_size+0,
+        in_size=var_size + 1,
+        out_size=var_size + 0,
         depth=2,
         width_size=12,
         activation=jnn.tanh,
-         key=key_2,
+        key=key_2,
     )
 
     # constant values for the model (non-optimized)

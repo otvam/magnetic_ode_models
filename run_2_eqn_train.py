@@ -73,7 +73,7 @@ def _get_optimizer(method):
                 "loss_target": 0.02,       # target loss value for stopping the training
             },
         }
-        
+
         # backward differentiation can be used
         fwd = False
     elif method == "min":

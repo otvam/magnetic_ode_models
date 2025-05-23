@@ -81,7 +81,7 @@ def _split_indices(n_data, n_train, n_test, rng):
     """
 
     # random selection of the samples
-    idx_all = rng.choice(np.arange(n_data), n_train+n_test, replace=False)
+    idx_all = rng.choice(np.arange(n_data), n_train + n_test, replace=False)
 
     # split the train and test sets
     idx_perm = rng.permutation(np.arange(n_train + n_test))

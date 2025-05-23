@@ -84,8 +84,8 @@ class ConvTracker:
 
         # compute the convergence rate
         if self.step_count >= (2 * self.conv_steps):
-            loss_a = jnp.min(self.loss_val_vec[:-self.conv_steps])
-            loss_b = jnp.min(self.loss_val_vec[-self.conv_steps:])
+            loss_a = jnp.min(self.loss_val_vec[: -self.conv_steps])
+            loss_b = jnp.min(self.loss_val_vec[-self.conv_steps :])
             conv_val = (loss_a - loss_b) / jnp.min(self.loss_val_vec)
         else:
             conv_val = jnp.inf
@@ -99,7 +99,7 @@ class ConvTracker:
         jax.debug.print("    conv_val = {:+.4f}", conv_val)
 
         # break training if invalid values are found
-        if not jnp.isfinite(loss_trn) or  not jnp.isfinite(loss_val):
+        if not jnp.isfinite(loss_trn) or not jnp.isfinite(loss_val):
             jax.debug.print("    solver convergence: non-finite values")
             return True
 

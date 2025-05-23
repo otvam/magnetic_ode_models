@@ -77,22 +77,22 @@ def get_plot_single(name, dser):
     print(f"sample status")
     print(f"    idx_global = {dser['idx_var']['idx_global'].item()}")
     print(f"    idx_local = {dser['idx_var']['idx_local'].item()}")
-    _disp_var_metrics("dBdt_ref metrics", dser['dBdt_ref_var'], 1e-3, "mT/us")
-    _disp_var_metrics("B_ref metrics", dser['B_ref_var'], 1e3, "mT")
-    _disp_var_metrics("H_ref metrics", dser['H_ref_var'], 1e0, "A/m")
-    _disp_var_metrics("H_cmp metrics", dser['H_cmp_var'], 1e0, "A/m")
-    _disp_var_metrics("H_err metrics", dser['H_err_var'], 1e0, "A/m")
-    _disp_var_metrics("P_ref metrics", dser['P_ref_var'], 1e-3, "mW/cm3")
-    _disp_var_metrics("P_cmp metrics", dser['P_cmp_var'], 1e-3, "mW/cm3")
-    _disp_var_metrics("P_err metrics", dser['P_err_var'], 1e-3, "mW/cm3")
+    _disp_var_metrics("dBdt_ref metrics", dser["dBdt_ref_var"], 1e-3, "mT/us")
+    _disp_var_metrics("B_ref metrics", dser["B_ref_var"], 1e3, "mT")
+    _disp_var_metrics("H_ref metrics", dser["H_ref_var"], 1e0, "A/m")
+    _disp_var_metrics("H_cmp metrics", dser["H_cmp_var"], 1e0, "A/m")
+    _disp_var_metrics("H_err metrics", dser["H_err_var"], 1e0, "A/m")
+    _disp_var_metrics("P_ref metrics", dser["P_ref_var"], 1e-3, "mW/cm3")
+    _disp_var_metrics("P_cmp metrics", dser["P_cmp_var"], 1e-3, "mW/cm3")
+    _disp_var_metrics("P_err metrics", dser["P_err_var"], 1e-3, "mW/cm3")
     print(f"timing metrics")
     print(f"    dt_int = {1e9 * dser['t_var']['dt_int'].item():+.2f} ns")
     print(f"    td_int = {1e6 * dser['t_var']['td_int'].item():+.2f} us")
     print(f"    dt_out = {1e9 * dser['t_var']['dt_out'].item():+.2f} ns")
     print(f"    td_out = {1e6 * dser['t_var']['td_out'].item():+.2f} us")
     print(f"error metrics")
-    print(f"    power = {100 * dser['err_var']["power"].item():+.2f} %%")
-    print(f"    field = {100 * dser['err_var']["field"].item():+.2f} %%")
+    print(f"    power = {100 * dser['err_var']['power'].item():+.2f} %%")
+    print(f"    field = {100 * dser['err_var']['field'].item():+.2f} %%")
     print(f"================================================= {name}")
 
     # create the plots
@@ -147,10 +147,10 @@ def get_plot_all(name, dset):
     """
 
     # extract the vectors
-    is_test = dset['stat_var']["is_test"].to_numpy()
-    is_train = dset['stat_var']["is_train"].to_numpy()
-    err_power = dset['err_var']["power"].to_numpy()
-    err_field = dset['err_var']["field"].to_numpy()
+    is_test = dset["stat_var"]["is_test"].to_numpy()
+    is_train = dset["stat_var"]["is_train"].to_numpy()
+    err_power = dset["err_var"]["power"].to_numpy()
+    err_field = dset["err_var"]["field"].to_numpy()
 
     # compute the error metrics across the complete dataset
     test_power = _get_err_metrics(err_power[is_test])

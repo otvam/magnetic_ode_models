@@ -39,7 +39,7 @@ def _get_time(t_vec, v_vec, sig):
     ns_int = int(np.round(r_int * n_base))
 
     # get the new timebase for the evaluation vectors
-    dt_out =  (n_out * t_period) / ns_out
+    dt_out = (n_out * t_period) / ns_out
     t_out_vec = (n_wait * t_period) + dt_out * np.arange(ns_out)
 
     # get the new interpolation time and value vectors
