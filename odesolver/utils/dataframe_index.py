@@ -12,6 +12,16 @@ import pandas as pd
 import numpy as np
 
 
+def get_df_empty():
+    """
+    Create a return an empty DataFrame.
+    """
+
+    df = pd.DataFrame()
+
+    return df
+
+
 def set_df_idx(df_old, tag, col, mat):
     """
     Store a two-dimensional array into a Pandas DataFrame with a two-level index.

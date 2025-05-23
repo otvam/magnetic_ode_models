@@ -11,9 +11,7 @@ __author__ = "Thomas Guillod"
 __copyright__ = "Thomas Guillod - Dartmouth College"
 __license__ = "Mozilla Public License Version 2.0"
 
-import pandas as pd
 import numpy as np
-import numpy.random as rnd
 from odesolver.utils import dataframe_index
 
 
@@ -114,7 +112,7 @@ def _assemble_data(t_mat, dBdt_mat, B_mat, H_mat, idx_all, is_test, is_train):
     idx_tmp = np.arange(len(idx_all))
 
     # create a DataFrame
-    raw = pd.DataFrame()
+    raw = dataframe_index.get_df_empty()
 
     # assign the vectors
     var = {"idx_global": idx_all, "idx_local": idx_tmp}
