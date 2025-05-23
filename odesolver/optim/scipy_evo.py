@@ -33,7 +33,7 @@ def get_optim(lb, ub, optimizer, fct_opt, fct_decode, fct_penalty, idx_trn, idx_
     ub = np.array(ub, dtype=np.float32)
 
     # wrap the bounds into the required format
-    var_bnd = list(zip(lb, ub))
+    var_bnd = list(zip(lb, ub, strict=True))
 
     # get the convergence tracker
     conv_obj = conv_tracker.ConvTracker(conv_data)

@@ -57,6 +57,7 @@ def _compute_gradient(B_mat, dt):
 
     return t_mat, dBdt_mat
 
+
 def _clean_dataset(dBdt_mat, B_mat, H_mat):
     """
     Remove any offset and align the phase with respect to the magnetic field.
@@ -69,9 +70,9 @@ def _clean_dataset(dBdt_mat, B_mat, H_mat):
 
     # align the phase with respect to the magnetic field
     idx = np.argmin(np.abs(H_mat), axis=1)
-    dBdt_mat = np.array([np.roll(row, -pos) for row, pos in zip(dBdt_mat, idx)])
-    B_mat = np.array([np.roll(row, -pos) for row, pos in zip(B_mat, idx)])
-    H_mat = np.array([np.roll(row, -pos) for row, pos in zip(H_mat, idx)])
+    dBdt_mat = np.array([np.roll(row, -pos) for row, pos in zip(dBdt_mat, idx, strict=True)])
+    B_mat = np.array([np.roll(row, -pos) for row, pos in zip(B_mat, idx, strict=True)])
+    H_mat = np.array([np.roll(row, -pos) for row, pos in zip(H_mat, idx, strict=True)])
 
     return dBdt_mat, B_mat, H_mat
 

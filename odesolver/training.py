@@ -60,18 +60,17 @@ def _get_train_indices(key, dset, frac_valid):
     return idx_trn, idx_val
 
 
-def _disp_param(param):
+def _get_disp_param(param):
     """
     Display the model parameters.
     """
 
     for key, val in param.items():
         if jnp.isscalar(val):
-            jax.debug.print("{:s} = {:.3e}", key, val)
+            print(f"{key} = {val:.3e}")
         else:
-            val = ["{:.3e}".format(tmp) for tmp in val]
-            val = "[{:s}]".format(" , ".join(val))
-            jax.debug.print("{:s} = {:s}", key, val)
+            val = " , ".join([f"{tmp:.3e}" for tmp in val])
+            jax.debug.print("{:s} = [{:s}]", key, val)
 
 
 def _get_scale_param(param, bnd):
@@ -200,7 +199,7 @@ def get_train_eqn(name, ode, sig, bnd, opt, model, const, raw, param):
 
     # show the parameters
     jax.debug.print("========= initial parameters")
-    _disp_param(param)
+    _get_disp_param(param)
     jax.debug.print("========= initial parameters")
 
     # parse the dataset
@@ -239,7 +238,7 @@ def get_train_eqn(name, ode, sig, bnd, opt, model, const, raw, param):
 
     # show the parameters
     jax.debug.print("========= final parameters")
-    _disp_param(param)
+    _get_disp_param(param)
     jax.debug.print("========= final parameters")
 
     # end the timing

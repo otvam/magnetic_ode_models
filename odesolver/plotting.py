@@ -187,9 +187,8 @@ def get_disp_param(name, param):
     print(f"================================================= {name}")
     for key, val in param.items():
         if np.isscalar(val):
-            print("{:s} = {:.3e}", key, val)
+            print(f"{key} = {val:.3e}")
         else:
-            val = ["{:.3e}".format(tmp) for tmp in val]
-            val = "[{:s}]".format(" , ".join(val))
-            print(f"{key} = {val}")
+            val = " , ".join([f"{tmp:.3e}" for tmp in val])
+            print(f"{key} = [{val}]")
     print(f"================================================= {name}")
