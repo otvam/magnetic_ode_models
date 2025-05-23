@@ -12,7 +12,7 @@ This webinar focuses on **ordinary differential equation models for soft-magneti
 * Using **equation-based models** (linear and nonlinear circuits)
 * Using **neural ordinary differential equation** models
 
-The **Python code** has the following features:
+The **Python code** has the following **features**:
 * Training and inference of ODE models
 * Management of the dataset with dataframes
 * Various metrics and plotting capabilities
